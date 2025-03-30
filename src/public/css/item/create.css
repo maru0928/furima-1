@@ -1,0 +1,106 @@
+.create-form__content {
+    margin: 0 auto;
+    padding: 15px 15px;
+    max-width: 1512px;
+}
+
+.create-form__heading {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.form__label--item {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.form__input--file {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px dashed #ccc;
+    padding: 50px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 4px;
+    z-index: 1;
+}
+
+.form__input--file input[type="file"] {
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+.custom-file-label {
+    display: inline-block;
+    padding: 5px 10px;
+    color: #FF5655;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border: 2px solid #FF5555;
+}
+
+.form {
+    margin: 0 auto;
+    width: 680px;
+    text-align: center;
+}
+
+.form__group {
+    margin-bottom: 5px;
+}
+
+.form__group-title {
+    text-align: left;
+}
+
+.form__error {
+    height: 20px;
+    color: #ff0000;
+    text-align: left;
+}
+
+.form__input--text input {
+    padding: 10px;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #5F5F5F;
+    border-radius: 3px;
+    appearance: none;
+}
+
+.price-input {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.price-input .currency-symbol {
+    position: absolute;
+    left: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.price-input input {
+    padding-left: 25px;
+    width: 100%;
+}
+
+.form_listing_button-submit {
+    padding: 10px;
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    background: #FF5555;
+    color: #fff;
+    cursor: pointer;
+}
