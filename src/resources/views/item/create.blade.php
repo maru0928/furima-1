@@ -27,6 +27,24 @@
         </div>
     <div class="form__group">
       <div class="form__group-title">
+        <span class="form__label--item">商品の状態</span>
+      </div>
+      <div class="create-form__select-inner">
+          <select class="create-form__select" name="condition_id">
+            <option disabled selected>選択してください</option>
+            @foreach($conditions as $condition)
+            <option value="{{ $condition->id }}" {{ old('condition_id')==$condition->id ? 'selected' : '' }}>{{
+              $condition->content }}</option>
+            @endforeach
+          </select>
+        </div>
+        <p class="create-form__error-message">
+          @error('category_id')
+          {{ $message }}
+          @enderror
+        </p>
+    <div class="form__group">
+      <div class="form__group-title">
         <span class="form__label--item">商品名</span>
       </div>
       <div class="form__group-content">

@@ -1,7 +1,7 @@
 .create-form__content {
     margin: 0 auto;
-    padding: 15px 15px;
-    max-width: 1512px;
+    padding: 60px 30px;
+    max-width: 100%;
 }
 
 .create-form__heading {
@@ -19,7 +19,7 @@
     justify-content: center;
     align-items: center;
     border: 1px dashed #ccc;
-    padding: 50px;
+    padding: 70px;
     width: 100%;
     box-sizing: border-box;
     border-radius: 4px;
@@ -92,6 +92,13 @@
 .price-input input {
     padding-left: 25px;
     width: 100%;
+}
+
+.create-form__select {
+    padding: 8px 16px;
+    width: 50%;
+    background-color: #B1B1B1;
+    color: #EAEAEA;
 }
 
 .form_listing_button-submit {

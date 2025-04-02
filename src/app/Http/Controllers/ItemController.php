@@ -3,18 +3,27 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Product;
+use App\Models\Condition;
 
 class ItemController extends Controller
 {
-    public function index()
+    // コントローラーの例
+public function index()
 {
-    return view('index');
+    // 製品のデータを取得
+    $products = Product::all();  // ここで製品を取得する例
+
+    // ビューに渡す
+    return view('index', compact('products'));
 }
+
 
     // 商品を表示するフォームを表示
     public function create()
     {
-        return view('item.create');  // item.create ビューを表示
+        $conditions = Condition::all(); 
+        return view('item.create', compact('conditions')); // item.create ビューを表示
     }
 
     // 商品を保存する処理
