@@ -11,6 +11,11 @@
   </div>
   <form class="form" action="/login" method="post">
     @csrf
+    @if ($errors->has('login'))
+    <div class="form__error">
+      {{ $errors->first('login') }}
+    </div>
+    @endif
     <div class="form__group">
       <div class="form__group-title">
         <span class="form__label--item">メールアドレス</span>

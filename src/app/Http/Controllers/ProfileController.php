@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Product;
+use Illuminate\Support\Facades\Auth;
 
 class ProfileController extends Controller
 {
@@ -11,4 +13,11 @@ class ProfileController extends Controller
     {
         return view('profile-update');
     }
+
+    public function editAddress($id)
+{
+    $product = Product::findOrFail($id);
+    $user = Auth::user();
+    return view('address-update', compact('product', 'user'));
+}
 }

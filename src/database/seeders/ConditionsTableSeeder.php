@@ -18,11 +18,11 @@ class ConditionsTableSeeder extends Seeder
             "良好",
             "目立った傷や汚れなし",
             "やや傷や汚れあり",
-            "状態が悪い",
+            "状態が悪い"
         ];
 
         foreach ($contents as $content) {
-            DB::table('condition')->insert([
+            DB::table('conditions')->insert([
                 'content' => $content,
             ]);
         }

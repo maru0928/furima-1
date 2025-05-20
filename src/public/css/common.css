@@ -9,6 +9,7 @@
     margin: 0 auto;
     padding: 15px 15px;
     max-width: 1512px;
+    width: 100%;
 }
 
 .header-utilities {
@@ -39,12 +40,15 @@
 }
 
 .header-utilities nav {
-    width: 18%;
+    /* width: 18%; */
+    min-width: 200px;
+    width: auto;
 }
 
 .header-nav {
     display: flex;
     align-items: center;
+    gap: 20px;
     justify-content: space-between;
 }
 

@@ -18,73 +18,83 @@ class ProductsTableSeeder extends Seeder
             [
                 'name' => '腕時計',
                 'price' => '15000',
-                'image' => 'storage/images/Armani+Mens+Clock.jpg',
+                'image' => '/images/Armani+Mens+Clock.jpg',
                 'description' => 'スタイリッシュなデザインのメンズ腕時計',
-                'condition'  => '良好'
+                'condition'  => '良好',
+                'category' => '時計'
             ],
             [
                 'name' => 'HDD',
                 'price' => '5000',
-                'image' => 'storage/images/HDD+Hard+Disk.jpg',
+                'image' => '/images/HDD+Hard+Disk.jpg',
                 'description' => '高速で信頼性の高いハードディスク',
-                'condition'  => '目立った傷や汚れなし'
+                'condition'  => '目立った傷や汚れなし',
+                'category' => 'PCパーツ'
             ],
             [
                 'name' => '玉ねぎ３束',
                 'price' => '300',
-                'image' => 'storage/images/iLoveIMG+d.jpg',
+                'image' => '/images/iLoveIMG+d.jpg',
                 'description' => '新鮮な玉ねぎ3束のセット',
-                'condition'  => 'やや傷や汚れあり'
+                'condition'  => 'やや傷や汚れあり',
+                'category' => '食材'
             ],
             [
                 'name' => '革靴',
                 'price' => '4000',
-                'image' => 'storage/images/Leather+Shoes+Product+Photo.jpg',
+                'image' => '/images/Leather+Shoes+Product+Photo.jpg',
                 'description' => 'クラシックなデザインの革靴',
-                'condition'  => '状態が悪い'
+                'condition'  => '状態が悪い',
+                'category' => 'ファッション'
             
             ],
             [
                 'name' => 'ノートPC',
                 'price' => '45000',
-                'image' => 'storage/images/Living+Room+Laptop.jpg',
+                'image' => '/images/Living+Room+Laptop.jpg',
                 'description' => '高性能なノートパソコン',
-                'condition'  => '良好'
+                'condition'  => '良好',
+                'category' => 'PC'
             ],
             [
                 'name' => 'マイク',
                 'price' => '8000',
-                'image' => 'storage/images/Music+Mic+4632231.jpg',
+                'image' => '/images/Music+Mic+4632231.jpg',
                 'description' => '高音質のレコーディング用マイク',
-                'condition'  => '目立った傷や汚れなし'
+                'condition'  => '目立った傷や汚れなし',
+                'category' => '音楽'
             ],
             [
                 'name' => 'ショルダーバッグ',
                 'price' => '3500',
-                'image' => 'storage/images/Purse+fashion+pocket.jpg',
+                'image' => '/images/Purse+fashion+pocket.jpg',
                 'description' => 'おしゃれなショルダーバッグ',
-                'condition'  => 'やや傷や汚れあり'
+                'condition'  => 'やや傷や汚れあり',
+                'category' => 'ファッション'
             ],
             [
                 'name' => 'タンブラー',
                 'price' => '500',
-                'image' => 'storage/images/Tumbler+souvenir.jpg',
+                'image' => '/images/Tumbler+souvenir.jpg',
                 'description' => '使いやすいタンブラー',
-                'condition'  => '状態が悪い'
+                'condition'  => '状態が悪い',
+                'category' => 'キッチン'
             ],
             [
                 'name' => 'コーヒーミル',
                 'price' => '4000',
-                'image' => 'storage/images/Waitress+with+Coffee+Grinder.jpg',
+                'image' => '/images/Waitress+with+Coffee+Grinder.jpg',
                 'description' => '手動のコーヒーミル',
-                'condition'  => '良好'
+                'condition'  => '良好',
+                'category' => 'キッチン'
             ],
             [
                 'name' => 'メイクセット',
                 'price' => '2500',
-                'image' => 'storage/images/外出メイクアップセット.jpg',
+                'image' => '/images/外出メイクアップセット.jpg',
                 'description' => '便利なメイクアップセット',
-                'condition'  => '目立った傷や汚れなし'
+                'condition'  => '目立った傷や汚れなし',
+                'category' => 'ビューティー'
             ],
         ]);
     }

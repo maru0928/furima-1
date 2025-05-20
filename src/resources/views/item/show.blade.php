@@ -6,42 +6,52 @@
 
 @section('content')
 <div class="all-contents">
-        <form action="/update" method ="POST">
-        @csrf
-            <div class="top-contents">
+        <!-- <form action="/item" method ="POST"> -->
+            <! <div class="top-contents">
                 <div class="left-content">
-                    <p><span class="span-item">商品一覧></span>{{$product->name}}</p>
-                    <img src="{{ asset($product->image) }}"  alt="店内画像" class="img-content"/>
+                    <img src="{{ asset($product->image) }}" alt="商品画像" class="img-content" />
                 </div>
                 <div class="right-content">
-                    <label class="name-label">商品名</label>
-                    <input type="text" placeholder="{{$product->name}}" name="product_name" class="text">
-                    <label class="price-label">値段</label>
-                    <input type="text" placeholder="{{$product->price}}" name="product_price" class="text">
-                    <label class="season-label">季節</label>
-                    @foreach ($seasons as $season)
-                        <label for="season">{{$season->name}}</label>
-                        @if($product->checkSeason($season,$product) == "no")
-                            <input type="checkbox" id="season" value="{{$season->id}}">
-                        @elseif($product->checkSeason($season,$product) == "yes")
-                            <input type="checkbox" id="season" value="{{$season->id}}" checked>
-                        @endif
-                    @endforeach
-                </div>
-            </div>
-            <div class="under-content">
+                 <div class="detail-content">
+                   <p class="product-name">{{$product->name}}</p>
+                   <a class="brand-name">ブランド名</a>
+                 </div>
+                  <div class="price-content">
+                   <p>
+                    <span class="currency">¥</span>
+                    <span class="price">{{ number_format($product->price) }}</span>
+                    <span class="tax">(税込)</span>
+                   </p>
+                   <div class="stats">
+                    <span class="likes">
+                    <a href="/item/{{ $product->id }}/like" class="button-like">
+                     <button id="like-btn" data-product-id="{{ $product->id }}"    style="background:none; border:none;">
+                    @if(Auth::check() && $product->isLikedBy(Auth::user()))
+                      <img src="{{ asset('images/星アイコン8.png') }}" alt="Liked" class="icon liked" id="like-icon">
+                      @else
+                      <img src="{{ asset('images/星アイコン8.png') }}" alt="Not Liked" class="icon not-liked" id="like-icon">
+                      @endif
+                     </button>
+                    <span id="like-count">{{ $product->likes_count }}</span>
+                    </span>
+                    </a>
+                    <span class="comments">
+                      <img src="{{ asset('images/ふきだしのアイコン.png') }}" alt="Comments" class="icon">
+                      <span class="comments-count">{{ $product->comments_count }}</span>
+                    </span>
+                   </div>
+                   <a href="{{ route('purchase.show', $product->id) }}">購入手続きへ</a>
+                  </div>
                 <input type="file" id="product_image" class="image" name="product_image">
                 <label class="description-label">商品説明</label>
-                <textarea cols="30" rows="5" name="product_description" class="product-description">{{$product->description}}</textarea>
+                <p class="product-description">{{$product->description}}</p>
+                <label class="description-label">商品の情報</label>
+                <p class="product-description">{{$product->description}}</p>
                 <div class="button-content">
-                    <a href="/products" class="back">戻る</a>
-                    <button type="submit" class="button-change">変更を保存</button>
-                    <div class="trash-can-content">
-                        <a href="/products/{{$product->id}}/delete">
-                            <img src="{{ asset('/images/trash-can.png') }}"  alt="ゴミ箱の画像" class="img-trash-can"/>
-                        </a>
-                    </div>
+                    <button type="submit" class="button-change">コメントを送信する</button>
                 </div>
+              </div>  
             </div>
         </form>
     </div>
+@endsection

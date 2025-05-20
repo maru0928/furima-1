@@ -9,7 +9,7 @@
   <div class="register-form__heading">
     <h2>プロフィール設定</h2>
   </div>
-   <form method="POST" action="{{ route('profile.update') }}">
+   <form method="POST" action="{{ route('profile.update') }}" class="form">
     @csrf
     <div class="form__group">
       <div class="form__group-title">
@@ -32,7 +32,7 @@
       </div>
       <div class="form__group-content">
         <div class="form__input--text">
-          <input type="email" name="email" value="{{ old('email') }}" />
+          <input type="text" name="postal_code" value="{{ old('postal_code') }}" />
         </div>
         <div class="form__error">
           @error('email')
@@ -47,7 +47,7 @@
       </div>
       <div class="form__group-content">
         <div class="form__input--text">
-          <input type="password" name="password" />
+          <input type="text" name="address" value="{{ old('address') }}" />
         </div>
         <div class="form__error">
           @error('password')
@@ -62,7 +62,7 @@
       </div>
       <div class="form__group-content">
         <div class="form__input--text">
-          <input type="password" name="password_confirmation" />
+          <input type="text" name="building" value="{{ old('building') }}" />
         </div>
       </div>
     </div>

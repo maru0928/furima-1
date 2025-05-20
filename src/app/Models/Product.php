@@ -14,4 +14,16 @@ class Product extends Model
         return $this->belongsToMany(Product::class,'product_id',);
     }
 
+    public function likes()
+    {
+    return $this->belongsToMany(User::class, 'likes')->withTimestamps();
+    $product = Product::withCount('likes')->find($id);
+
+    }
+
+    public function isLikedBy($user)
+    {
+    return $this->likes()->where('user_id', $user->id)->exists();
+    }
+
 }

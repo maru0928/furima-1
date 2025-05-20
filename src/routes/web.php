@@ -17,9 +17,10 @@ use App\Http\Controllers\ProfileController;
 */
 
 Route::post('/register', [UserController::class, 'storeUser']);
+Route::post('/login', [UserController::class, 'loginUser']);
 Route::get('/profile', [UserController::class, 'showProfile']);
-Route::middleware('auth')->group(function () {
-Route::get('/', [ItemController::class, 'index']);});
+Route::middleware('auth')->group(function (){
+Route::get('/', [ItemController::class, 'index']);
 
 // プロフィール設定画面にリダイレクト
 Route::middleware(['auth'])->get('/mypage/profile', [ProfileController::class, 'update'])->name('profile-update');
@@ -28,4 +29,10 @@ Route::middleware(['auth'])->get('/mypage/profile', [ProfileController::class, '
 Route::middleware(['auth'])->post('/mypage/profile', [ProfileController::class, 'update'])->name('profile.update');
 Route::get('/sell', [ItemController::class, 'create'])->name('item.create');
 Route::post('/sell', [ItemController::class, 'store'])->name('item.store');
-Route::get('/products/detail/{product_id}', [ProductController::class, 'getDetail']);
+Route::get('/item/{product_id}', [ItemController::class, 'showItem'])->name('item.show');
+Route::post('/item/{product_id}/like', [ItemController::class, 'toggleLike']);
+Route::post('/item/{product_id}/comment', [ItemController::class, 'postComment'])->name('item.comment');
+Route::get('/purchase/{product}', [ItemController::class, 'showPurchase'])->name('purchase.show');
+Route::get('/purchase/address/{product_id}', [ProfileController::class, 'editAddress'])->name('purchase.editAddress');
+
+});

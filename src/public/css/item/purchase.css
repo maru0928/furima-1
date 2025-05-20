@@ -1,0 +1,116 @@
+.all-contents {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 80px;
+    gap: 40px;
+}
+
+.left-content {
+    flex: 1;
+}
+
+.summary-box {
+    width: 440px;
+    height: fit-content;
+    border: 1px solid #000;
+    padding: 20px;
+    font-size: 24px;
+}
+
+.summary-table td {
+    padding: 16px;
+    border: 1px solid #000;
+    font-size: 20px;
+}
+
+.purchase-button {
+    margin-top: 30px;
+    width: 440px;
+    padding: 15px;
+    font-size: 22px;
+    background-color: #FF5555;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.product-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.image-box img.img-content {
+    width: 180px;
+    height: 180px;
+    background-color: #eee;
+    object-fit: cover;
+}
+
+.text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+}
+
+.product-name {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.price-content {
+    font-size: 27px;
+    color: #000000;
+    margin: 0;
+}
+
+.separator-line {
+    height: 1px;
+    background-color: #000;
+    margin: 30px 0;
+}
+
+.payment-section,
+.shipping-section {
+    margin-top: 40px;
+    font-size: 18px;
+}
+
+.payment-title,
+.shipping-title {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.payment-select {
+    width: 300px;
+    height: 36px;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0 10px;
+    color: #5F5F5F;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    appearance: none;
+}
+
+.shipping-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-weight: bold;
+}
+
+.change-link {
+    color: #007BFF;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.change-link:hover {
+    text-decoration: underline;
+}
